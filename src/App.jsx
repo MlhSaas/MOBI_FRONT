@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -30,6 +31,24 @@ function App() {
       </p>
     </>
   )
+=======
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';  
+import Register from './pages/Register.jsx';
+import Login from './pages/loginPage.jsx';
+import Home from './pages/Home.jsx';
+import CreateEluPage from './pages/createEluPage.jsx';
+import './App.css';
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/register" element={<Register />} />
+      <Route path="/home" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/createElu" element={<CreateEluPage />} />
+    </Routes>
+  );
+>>>>>>> 82966b0 (Add Elu Welcome Page)
 }
 
-export default App
+export default App;

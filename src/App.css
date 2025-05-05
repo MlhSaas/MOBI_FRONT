@@ -2,7 +2,7 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  /*text-align: center;*/
 }
 
 .logo {
@@ -39,4 +39,49 @@
 
 .read-the-docs {
   color: #888;
+}
+/**/
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.profile-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-card .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.actions-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.actions-bar i,
+.actions-bar span,
+.actions-bar svg {
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.actions-bar i:hover,
+.actions-bar span:hover,
+.actions-bar svg:hover {
+  transform: scale(1.2);
 }
