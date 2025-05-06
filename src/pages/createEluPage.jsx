@@ -4,7 +4,7 @@ import myProfile from '../assets/images/myProfile.png';
 import Layout from '../components/Layout';
 
 const CreateEluPage = () => {
-  const elus = Array(10).fill({
+  const elus = Array(12).fill({
     name: 'Mache Voutsa',
     username: 'Stevie',
     avatar: myProfile,
