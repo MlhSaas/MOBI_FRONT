@@ -12,7 +12,7 @@ const EluPage = () => {
 
   return (
     <Layout>
-      <h1 className="page-title">Créer un élu</h1>
+      <h1 className="page-title">Page des élus</h1>
       <div className="elu-grid">
         {elus.map((elu, index) => (
           <EluCard key={index} {...elu} />

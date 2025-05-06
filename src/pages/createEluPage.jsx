@@ -1,24 +1,37 @@
-import React from 'react';
-import EluCard from '../components/EluCard';
-import myProfile from '../assets/images/myProfile.png';
-import Layout from '../components/Layout';
+import React from "react";
+import createEluBg from "../assets/images/createEluBg.png";
+import "../styles/createEluPage.css";
+import Layout from "../components/Layout";
 
 const CreateEluPage = () => {
-  const elus = Array(10).fill({
-    name: 'Mache Voutsa',
-    username: 'Stevie',
-    avatar: myProfile,
-  });
-
   return (
-    <Layout>
-      <h1 className="page-title">Créer un élu</h1>
-      <div className="elu-grid">
-        {elus.map((elu, index) => (
-          <EluCard key={index} {...elu} />
-        ))}
+    <div
+      className="create-elu-container"
+      style={{
+        backgroundImage: `url(${createEluBg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        height: "100vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <div className="modal">
+        <h2>Page de création d'un élu</h2>
+        <form>
+          <div className="form-group">
+            <label>Entrez votre nom</label>
+            <input type="text" placeholder="Entrez le nom" />
+          </div>
+          <div className="form-group">
+            <label>Entrez votre prenom</label>
+            <input type="text" placeholder="Entrez votre prenom" />
+          </div>
+          <button type="submit">Ajouter</button>
+        </form>
       </div>
-    </Layout>
+    </div>
   );
 };
 
