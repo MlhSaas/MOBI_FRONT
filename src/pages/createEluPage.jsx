@@ -1,7 +1,6 @@
 import React from "react";
 import createEluBg from "../assets/images/createEluBg.png";
 import "../styles/createEluPage.css";
-import Layout from "../components/Layout";
 
 const CreateEluPage = () => {
   return (
