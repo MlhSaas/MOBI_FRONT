@@ -1,0 +1,57 @@
+.layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: white;
+  border-right: 1px solid #ddd;
+  padding: 20px;
+  box-sizing: border-box;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.main-content {
+  margin-left: 250px;
+  padding: 30px;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #f5f5f5;
+  box-sizing: border-box;
+}
+
+.page-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.elu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
