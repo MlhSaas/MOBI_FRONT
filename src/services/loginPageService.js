@@ -9,6 +9,8 @@ const authService = {
             if (response.data.token) {
                 localStorage.setItem('token', response.data.token);
                 console.log(response.data.token);
+                console.log('localStorage token :');
+                console.log(localStorage);
             }
             return response.data;
         } catch (error) {
@@ -18,6 +20,8 @@ const authService = {
     },
     logout() {
         localStorage.removeItem('token');
+        console.log('localStorage token :');
+        console.log(localStorage);
     },
     getCurrentUser() {
         return JSON.parse(localStorage.getItem('user'));

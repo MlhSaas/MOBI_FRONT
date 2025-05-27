@@ -14,7 +14,7 @@ export default function Login() {
         try {
             const data = await authService.login(email, password);
             console.log('Connexion réussie:', data);
-            navigate('/'); // ← Redirection après connexion
+            navigate('/dashboard');
         } catch (error) {
             setError('Email ou mot de passe incorrect');
         }
@@ -49,13 +49,13 @@ export default function Login() {
             backgroundColor: '#f9f9f9',
             borderRadius: '12px',
             padding: '40px',
-            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.5)',
         },
         title: {
             fontSize: '32px',
             fontWeight: 'bold',
             marginBottom: '20px',
-            color: '#333',
+            color: '#00f2fe',
         },
         input: {
             width: '100%',
@@ -99,7 +99,7 @@ export default function Login() {
         },
         terms: {
             fontSize: '12px',
-            color: '#777',
+            color: '#151515',
             textAlign: 'center',
         },
         image: {
@@ -126,7 +126,7 @@ export default function Login() {
                 <form onSubmit={handleLogin}>
                     <div style={styles.formWrapper}>
                         <h2 style={styles.title}>Sign In</h2>
-                        <p style={{ fontSize: '14px', marginBottom: '10px' }}>
+                        <p style={{ fontSize: '14px', marginBottom: '10px' , color : 'black' }}>
                             Connecte toi avec ton email
                         </p>
                         <input
@@ -137,7 +137,7 @@ export default function Login() {
                             onChange={(e) => setEmail(e.target.value)}
                             required
                         />
-                        <p style={{ fontSize: '14px', marginBottom: '10px' }}>
+                        <p style={{ fontSize: '14px', marginBottom: '10px' , color : 'black' }}>
                             Mot de passe
                         </p>
                         <input
@@ -150,17 +150,6 @@ export default function Login() {
                         />
                         {error && <p style={styles.errorMessage} aria-live="assertive">{error}</p>}
                         <button type="submit" style={styles.button}>Sign In</button>
-                        <div style={styles.separator}>Or continue with</div>
-                        <div style={styles.socialButtons}>
-                            <button type="button" style={styles.socialBtn}>Google</button>
-                            <button type="button" style={styles.socialBtn}>Facebook</button>
-                        </div>
-                        <p style={styles.terms}>
-                            By registering you agree to our{' '}
-                            <span style={{ color: '#007bff', textDecoration: 'underline', cursor: 'pointer' }}>
-                                Terms and Conditions
-                            </span>
-                        </p>
                     </div>
                 </form>
             </div>

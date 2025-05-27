@@ -5,7 +5,7 @@ const API_URL = 'http://localhost:3001/api';
 const acceuilService = {
     async getPostsByCollectivite(token) {
         try {
-            const response = await axios.get(`${API_URL}/posts/getPostByCollectivite`, {
+            const response = await axios.get(`${API_URL}/post/getPostsByCollectivite`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
